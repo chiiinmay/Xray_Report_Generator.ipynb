@@ -1,0 +1,40 @@
+# Creating a basic .gitignore file suitable for a Python project with Jupyter Notebooks
+
+gitignore_content = """
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Environment files
+.env
+.venv/
+env/
+venv/
+ENV/
+
+# PyTorch and Hugging Face cache
+*.pt
+*.pth
+*.ckpt
+*.h5
+~/.cache/huggingface/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Logs
+*.log
+"""
+
+# Save to file
+gitignore_path = "/mnt/data/.gitignore"
+with open(gitignore_path, "w") as file:
+    file.write(gitignore_content)
+
+gitignore_path
